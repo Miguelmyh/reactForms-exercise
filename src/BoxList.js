@@ -5,12 +5,12 @@ import Box from "./Box";
 
 const BoxList = () => {
   const INITIAL_STATE = [
-    {
-      id: uuid(),
-      width: 2,
-      height: 4,
-      backgroundColor: "black",
-    },
+    // {
+    //   id: uuid(),
+    //   width: "",
+    //   height: "",
+    //   backgroundColor: "",
+    // },
   ];
   const [boxes, setBoxes] = useState(INITIAL_STATE);
   const addBox = (newBox) => {
@@ -29,6 +29,7 @@ const BoxList = () => {
             {boxes.map((box) => (
               <Box
                 key={box.id}
+                data-testId={1}
                 id={box.id}
                 width={box.width}
                 height={box.height}
